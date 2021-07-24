@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Form, Select, Button, Row, Col, Input, DatePicker } from 'antd'
 import { useQuery, QueryClient, QueryClientProvider } from 'react-query'
-import { differenceInDays } from 'date-fns'
+import { differenceInDays, startOfToday } from 'date-fns'
 import Image from 'next/image'
 import { ReactQueryDevtoolsPanel } from 'react-query/devtools'
 import Header from '../components/Header'
@@ -12,7 +12,7 @@ const queryClient = new QueryClient()
 
 function disabledDate(current) {
   // Can not select days before today and today
-  return current && current > Date.now();
+  return current && current > startOfToday();
 }
 
 export default function Home() {
