@@ -68,16 +68,8 @@ const HomePageContent = () => {
 
   const calculateProfitability = (data, initialDate) => {
     let days = 0;
-    console.log('\n', '===============================================', '\n');
-    console.log('data');
-    console.log(data);
-    console.log('\n', '===============================================', '\n');
     if (initialDate) {
       days = differenceInDays(new Date(), new Date(initialDate.format()));
-      console.log('\n', '===============================================', '\n');
-      console.log('days');
-      console.log(days);
-      console.log('\n', '===============================================', '\n');
       setProfitability(data.in_game_slp / days)
     }
   }
@@ -131,6 +123,24 @@ const HomePageContent = () => {
             </Button>
           </Col>
         </Row>
+        {slpPriceUsd && (
+          <Row>
+            <Col className="mid-block" xs={{ span: 20, offset: 2 }} sm={{ span: 16, offset: 4 }} md={{ span: 12, offset: 6 }}>
+              <div style={{ display: 'flex', margin: '1em 0 0', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+                <h3
+                  style={{
+                    color: 'white',
+                    fontFamily: 'Mulish',
+                    margin: '0 0 0 0.2em',
+                    fontSize: '2em',
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
+                ><Image width="32" height="32" src={SLPLogo} alt="Small love potion logo" /> = ${slpPriceUsd.toFixed(3)}</h3>
+              </div>
+            </Col>
+          </Row>
+        )}
         {data && (
           <div
             style={{
