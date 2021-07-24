@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "author": {
+    "name": "AG",
+    "email": "andresg747@gmail.com",
+    "url": "https://github.com/andresg747"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@ant-design/icons": "4.2.1",
+    "@next/bundle-analyzer": "^9.1.4",
+    "antd": "4.3.0",
+    "cross-env": "^7.0.2",
+    "date-fns": "^2.23.0",
+    "dayjs": "1.8.28",
+    "esm": "^3.2.25",
+    "next": "latest",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-query": "^3.19.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false
+  },
+  "license": "MIT"
+}
