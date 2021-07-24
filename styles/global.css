@@ -194,3 +194,19 @@ body {
 .text-disabled {
   color: var(--textColorSecondary) !important;
 }
+
+.upper-block {
+  margin-bottom: 2em;
+}
+
+@media (min-width: 574px) {
+  .ant-btn.ant-btn-primary.ant-btn-lg {
+    margin-top: 0 !important;
+  }
+}
+
+@media (min-width: 1024) {
+  h3 {
+    font-size: 3em !important;
+  }
+}

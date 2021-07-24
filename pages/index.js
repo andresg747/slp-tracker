@@ -108,7 +108,7 @@ const HomePageContent = () => {
         onFinish={onFinish}
       >
         <Row style={{ backgroundColor: '#f7f7f7' }}>
-          <Col xs={{ span: 20, offset: 2 }} sm={{ span: 12, offset: 6 }} md={{ span: 8, offset: 8 }}>
+          <Col className="upper-block" xs={{ span: 20, offset: 2 }} sm={{ span: 16, offset: 4 }} md={{ span: 12, offset: 6 }}>
             <p style={{ marginTop: 30 }}>Ingresa tu dirección Ronin</p>
             <Form.Item
               name="address"
@@ -138,17 +138,17 @@ const HomePageContent = () => {
               background: 'url(https://cdn.axieinfinity.com/assets/images/4478be76c1db578de2f733377049e16b.png) center 15px / 499px 39px repeat-x, linear-gradient(to right top, rgb(57, 71, 46), rgb(37, 73, 65))'
             }}
           >
-            <Row style={{ padding: '4em 0' }}>
-              <Col xs={{ span: 11, offset: 1 }} sm={{ span: 12, offset: 6 }} md={{ span: 8, offset: 8 }}>
+            <Row style={{ padding: '6em 0' }}>
+              <Col xs={{ span: 11, offset: 1 }} md={{ span: 6, offset: 6 }}>
                 <DataBlock title="BALANCE ACTUAL" slpAmount={data.in_game_slp} subtitle={slpPriceUsd && `$${Number(data.in_game_slp * slpPriceUsd).toFixed(2)}`} />
               </Col>
-              <Col xs={{ span: 11 }} sm={{ span: 12, offset: 6 }} md={{ span: 8, offset: 8 }}>
+              <Col xs={{ span: 11 }} md={{ span: 6 }}>
                 <DataBlock title="RENTABILIDAD" slpAmount={Number(profitability).toFixed(0)} subtitle="SLP / 24hs" />
               </Col>
-              <Col style={{ marginTop: '2em' }} xs={{ span: 11, offset: 1 }} sm={{ span: 12, offset: 6 }} md={{ span: 8, offset: 8 }}>
+              <Col style={{ marginTop: '2em' }} xs={{ span: 11, offset: 1 }} md={{ span: 6, offset: 6 }}>
                 <DataBlock title="PROYECCIÓN SEMANAL" slpAmount={Number(profitability * 7).toFixed(0)} subtitle={slpPriceUsd && `$${Number(profitability * 7 * slpPriceUsd).toFixed(2)}`} />
               </Col>
-              <Col style={{ marginTop: '2em' }} xs={{ span: 11 }} sm={{ span: 12, offset: 6 }} md={{ span: 8, offset: 8 }}>
+              <Col style={{ marginTop: '2em' }} xs={{ span: 11 }} md={{ span: 6 }}>
                 <DataBlock title="PROYECCIÓN MENSUAL" slpAmount={Number(profitability * 30).toFixed(0)} subtitle={slpPriceUsd && `$${Number(profitability * 30 * slpPriceUsd).toFixed(2)}`} />
               </Col>
             </Row>
